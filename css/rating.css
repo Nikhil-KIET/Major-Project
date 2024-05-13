@@ -1,0 +1,68 @@
+
+.rating {
+    direction: rtl;
+    /* Right to left to ensure that the 1st star represents the lowest value */
+    unicode-bidi: bidi-override;
+    font-size: 24px;
+    /* Change size as needed */
+    line-height: 24px;
+    display: inline-block;
+}
+
+.rating input {
+    display: none;
+    /* Hide the default radio buttons */
+}
+
+.rating label {
+    display: inline-block;
+    cursor: pointer;
+    color: gray;
+    /* Default unselected star color */
+}
+
+.rating label:hover,
+.rating label:hover~label,
+.rating input:checked~label {
+    /* Style the selected state and the stars before the selected one */
+    color: #ffc107;
+    /* Color for the selected stars */
+}
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* Style for the input fields, just for a cleaner look */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #5cb85c;
+    /* Change button color as needed */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+    /* Darken button on hover */
+}
